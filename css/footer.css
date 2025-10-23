@@ -1,0 +1,115 @@
+/* Footer Styles - Mobile First */
+
+/* Base styles for mobile (320px+) */
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: white;
+  background-color: #af8648;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.footer-button:hover {
+  background-color: #8b6a38;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-button:active {
+  transform: translateY(0);
+}
+
+.footer-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Load More Spinner */
+#loadMoreSpinner {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: #af8648;
+  font-weight: bold;
+}
+
+/* Large mobile styles (480px+) */
+@media (min-width: 480px) {
+  footer {
+    padding: 1.5rem;
+  }
+
+  .footer-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    min-width: 120px;
+    width: auto;
+  }
+
+  #loadMoreSpinner {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet styles (768px+) */
+@media (min-width: 768px) {
+  footer {
+    padding: 2rem;
+  }
+
+  .footer-box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .footer-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    min-width: 150px;
+  }
+
+  #loadMoreSpinner {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop styles (1024px+) */
+@media (min-width: 1024px) {
+  .footer-button {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Large desktop styles (1440px+) */
+@media (min-width: 1440px) {
+  footer {
+    padding: 2.5rem;
+  }
+}

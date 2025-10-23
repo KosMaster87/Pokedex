@@ -1,0 +1,210 @@
+/* Pokémon Type Colors and Type-specific Styles */
+
+/* Primary Type Colors */
+.normal {
+  background-color: #a8a878;
+}
+
+.fire {
+  background-color: #f08030;
+}
+
+.water {
+  background-color: #6890f0;
+}
+
+.electric {
+  background-color: #f8d030;
+}
+
+.grass {
+  background-color: #78c850;
+}
+
+.ice {
+  background-color: #98d8d8;
+}
+
+.fighting {
+  background-color: #c03028;
+}
+
+.poison {
+  background-color: #a040a0;
+}
+
+.ground {
+  background-color: #e0c068;
+}
+
+.flying {
+  background-color: #a890f0;
+}
+
+.psychic {
+  background-color: #f85888;
+}
+
+.bug {
+  background-color: #a8b820;
+}
+
+.rock {
+  background-color: #b8a038;
+}
+
+.ghost {
+  background-color: #705898;
+}
+
+.steel {
+  background-color: #b8b8d0;
+}
+
+.dragon {
+  background-color: #7038f8;
+}
+
+.dark {
+  background-color: #705848;
+}
+
+.fairy {
+  background-color: #ee99ac;
+}
+
+/* Type Badge Styles - Mobile First */
+.type-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  min-width: 45px;
+}
+
+/* Type-specific Text Colors (for better contrast) */
+.normal.type-badge,
+.ice.type-badge,
+.electric.type-badge,
+.ground.type-badge {
+  color: #333;
+}
+
+/* Hover Effects for Type Badges */
+.type-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* Responsive Design for Type Elements - Mobile First */
+@media (min-width: 480px) {
+  .type-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .type-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+    min-width: 55px;
+  }
+}
+
+/* Type Gradients (for special effects) */
+.normal-gradient {
+  background: linear-gradient(135deg, #a8a878, #c0c090);
+}
+
+.fire-gradient {
+  background: linear-gradient(135deg, #f08030, #ff9f50);
+}
+
+.water-gradient {
+  background: linear-gradient(135deg, #6890f0, #88a8ff);
+}
+
+.electric-gradient {
+  background: linear-gradient(135deg, #f8d030, #ffdd50);
+}
+
+.grass-gradient {
+  background: linear-gradient(135deg, #78c850, #98d870);
+}
+
+.ice-gradient {
+  background: linear-gradient(135deg, #98d8d8, #b8e8e8);
+}
+
+.fighting-gradient {
+  background: linear-gradient(135deg, #c03028, #d85048);
+}
+
+.poison-gradient {
+  background: linear-gradient(135deg, #a040a0, #c060c0);
+}
+
+.ground-gradient {
+  background: linear-gradient(135deg, #e0c068, #f0d088);
+}
+
+.flying-gradient {
+  background: linear-gradient(135deg, #a890f0, #c8b0ff);
+}
+
+.psychic-gradient {
+  background: linear-gradient(135deg, #f85888, #ff78a8);
+}
+
+.bug-gradient {
+  background: linear-gradient(135deg, #a8b820, #c8d840);
+}
+
+.rock-gradient {
+  background: linear-gradient(135deg, #b8a038, #d8c058);
+}
+
+.ghost-gradient {
+  background: linear-gradient(135deg, #705898, #9078b8);
+}
+
+.steel-gradient {
+  background: linear-gradient(135deg, #b8b8d0, #d8d8f0);
+}
+
+.dragon-gradient {
+  background: linear-gradient(135deg, #7038f8, #9058ff);
+}
+
+.dark-gradient {
+  background: linear-gradient(135deg, #705848, #907868);
+}
+
+.fairy-gradient {
+  background: linear-gradient(135deg, #ee99ac, #ffb9cc);
+}
+
+/* Type Weakness/Effectiveness Colors (for future use) */
+.super-effective {
+  background-color: #4caf50;
+  color: white;
+}
+
+.not-very-effective {
+  background-color: #f44336;
+  color: white;
+}
+
+.no-effect {
+  background-color: #9e9e9e;
+  color: white;
+}

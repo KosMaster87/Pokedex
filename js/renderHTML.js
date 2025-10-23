@@ -10,17 +10,17 @@ function renderEachCardHTML(pokemonToMainCard) {
 
   return `
     <div
-      class="mainCard ${pokemonToMainCard.types[0].type.name}"
-      onclick="createHTMLPokemonPopup(${pokemonToMainCard.id})" 
+      class="pokemon-card ${pokemonToMainCard.types[0].type.name}"
+      onclick="createHTMLPokemonPopup(${pokemonToMainCard.id})"
     >
-      <div class="pokemonInfo">
-        <p class="pokeName">${name}</p>
-        <div class="typesList" id="${pokemonToMainCard.id}"></div>
+      <div class="pokemon-info">
+        <p class="pokemon-name">${name}</p>
+        <div class="pokemon-types" id="${pokemonToMainCard.id}"></div>
       </div>
 
-      <div class="pokemonImageBox">
-        <img 
-        class="pokemonImage"
+      <div class="pokemon-image-box">
+        <img
+        class="pokemon-image"
         src="${pokemonToMainCard.sprites.front_default}" />
       </div>
     </div>
@@ -47,18 +47,18 @@ function renderPokemonPopupHTML(pokemon) {
     .join("");
 
   return `
-    <div class="infocardContainer ${typeClass}">
-      <h2 class="infocardPokemonName">${name}</h2>
+    <div class="pokemon-detail-container ${typeClass}">
+      <h2 class="pokemon-detail-name">${name}</h2>
 
-      <img src="${image}" alt="${name}" class="infocardPokemonImage" />
+      <img src="${image}" alt="${name}" class="pokemon-detail-image" />
 
-      <h3>Fähigkeiten</h3>
+      <h3>Abilities</h3>
       <div class="abilities">${abilitiesHTML}</div>
 
-      <h3>Typen</h3>
-      <div class="infocardTypesList">${typesHTML}</div>
+      <h3>Types</h3>
+      <div class="pokemon-detail-types">${typesHTML}</div>
 
-      <button onclick="closePopup()" class="closePopupBtn">✖</button>
+      <button onclick="closePopup()" class="close-popup-button">✖</button>
     </div>
   `;
 }
