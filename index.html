@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="/futures.js"></script>
+    <script src="/renderHTML.js"></script>
+    <script src="/script.js"></script>
+
+    <title>Pokedex-star</title>
+  </head>
+  <body onload="init()">
+    <header>
+      <div class="headlineRowIndex">
+        <h2 class="headlineH2">Let's Pokémon</h2>
+        <div class="headlineInpField">
+          <input
+            class="headlineInp"
+            type="text"
+            placeholder="Choice your Pokemon"
+          />
+          <button class="headlineBtn headlineBtn">Go</button>
+        </div>
+      </div>
+      <h1 class="headlineText">The Pokémon are everywhere - catch them.</h1>
+    </header>
+
+    <section class="mainSection" id="mainSection"></section>
+    <div id="loadMoreSpinner" style="display: none">
+      Loading more Pokémon...
+    </div>
+
+    <footer>
+      <div class="footerBox">
+        <button class="footerBtn" onclick="loadMorePokemons()">
+          Push more Pokémon
+        </button>
+        <button class="footerBtn">Upward</button>
+      </div>
+    </footer>
+
+    <div class="loader" id="loader">Loading Pokémons...</div>
+    <div class="infocardContainerMain" id="infocardContainerMain"></div>
+  </body>
+</html>
