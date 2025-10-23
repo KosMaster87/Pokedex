@@ -1,47 +1,65 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <meta
+      name="description"
+      content="Discover and explore the world of Pokémon with our interactive Pokédex. Search, browse, and learn about all Pokémon with detailed stats, abilities, and types."
+    />
+    <meta
+      name="keywords"
+      content="pokemon, pokedex, pokemon stats, pokemon types, pokemon abilities, pokemon search, interactive pokedex"
+    />
+    <meta name="author" content="KosMaster87" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en" />
 
-    <script src="/futures.js"></script>
-    <script src="/renderHTML.js"></script>
-    <script src="/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="css/base.css" />
 
-    <title>Pokedex-star</title>
+    <script src="js/futures.js"></script>
+    <script src="js/renderHTML.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Pokédex - Catch 'em All! | Interactive Pokémon Database</title>
   </head>
   <body onload="init()">
     <header>
-      <div class="headlineRowIndex">
-        <h2 class="headlineH2">Let's Pokémon</h2>
-        <div class="headlineInpField">
+      <div class="headline-row-index">
+        <h2 class="headline-h2">Pokédex</h2>
+        <div class="headline-input-field">
           <input
-            class="headlineInp"
+            class="headline-input"
             type="text"
-            placeholder="Choice your Pokemon"
+            placeholder="Search your Pokémon"
           />
-          <button class="headlineBtn headlineBtn">Go</button>
+          <button class="headline-button">Search</button>
         </div>
       </div>
-      <h1 class="headlineText">The Pokémon are everywhere - catch them.</h1>
+      <h1 class="headline-text">Gotta catch 'em all!</h1>
     </header>
 
-    <section class="mainSection" id="mainSection"></section>
+    <section class="main-section" id="mainSection"></section>
     <div id="loadMoreSpinner" style="display: none">
       Loading more Pokémon...
     </div>
 
     <footer>
-      <div class="footerBox">
-        <button class="footerBtn" onclick="loadMorePokemons()">
-          Push more Pokémon
+      <div class="footer-box">
+        <button class="footer-button" onclick="loadMorePokemons()">
+          Load More Pokémon
         </button>
-        <button class="footerBtn">Upward</button>
+        <button class="footer-button">Back to Top</button>
       </div>
     </footer>
 
-    <div class="loader" id="loader">Loading Pokémons...</div>
-    <div class="infocardContainerMain" id="infocardContainerMain"></div>
+    <div class="loader" id="loadingIndicator">Loading Pokémon...</div>
+    <div class="pokemon-detail-overlay" id="pokemonDetailOverlay"></div>
   </body>
 </html>

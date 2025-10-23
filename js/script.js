@@ -19,10 +19,10 @@ async function init() {
 }
 
 /**
- * Blendet den Ladebildschirm ("Loading Pokémons...") aus.
+ * Blendet den Ladebildschirm ("Loading Pokémon...") aus.
  */
 function loader() {
-  document.getElementById("loader").style.display = "none";
+  document.getElementById("loadingIndicator").style.display = "none";
 }
 
 /**
@@ -84,7 +84,7 @@ async function createHTMLPokemonCard() {
  * beim Einblenden der Karten zu erzielen.
  */
 function delayMainCard() {
-  let cards = document.querySelectorAll(".mainCard");
+  let cards = document.querySelectorAll(".pokemon-card");
   cards.forEach((card, index) => {
     setTimeout(() => {
       card.classList.add("visible");
@@ -101,7 +101,7 @@ function delayMainCard() {
 function createHTMLPokemonPopup(index) {
   currentPokemon = AllLoadedCards.find((pokemon) => pokemon.id === index);
 
-  const container = document.getElementById("infocardContainerMain");
+  const container = document.getElementById("pokemonDetailOverlay");
   container.innerHTML = "";
   container.style.display = "flex";
   container.innerHTML = renderPokemonPopupHTML(currentPokemon);
@@ -111,5 +111,5 @@ function createHTMLPokemonPopup(index) {
  * Schließt das Detail-Popup-Fenster des Pokémon.
  */
 function closePopup() {
-  document.getElementById("infocardContainerMain").style.display = "none";
+  document.getElementById("pokemonDetailOverlay").style.display = "none";
 }
