@@ -23,7 +23,9 @@ config/env/.env.production
 .history/*
 
 # CI/CD
-.github/
+# Keep .github folder (workflows)
+!.github/
+!.github/workflows/
 
 # Logs
 *.log

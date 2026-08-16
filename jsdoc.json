@@ -1,0 +1,52 @@
+{
+  "source": {
+    "include": ["js"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(node_modules|\\.test\\.js$|\\.html$)"
+  },
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "template": "./node_modules/clean-jsdoc-theme"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "clean-jsdoc-theme": {
+      "theme": "dark",
+      "title": "Pokedex Documentation",
+      "description": "Complete documentation for Pokedex - an interactive Pokemon explorer built with vanilla JavaScript and PokeAPI",
+      "menu": [
+        {
+          "title": "Home",
+          "link": "index.html"
+        },
+        {
+          "title": "Global Functions",
+          "link": "global.html"
+        },
+        {
+          "title": "GitHub Repository",
+          "link": "https://github.com/KosMaster87/Pokedex",
+          "target": "_blank"
+        }
+      ],
+      "search": true,
+      "collapse": false,
+      "sort": true,
+      "sectionOrder": [
+        "Classes",
+        "Modules",
+        "Global",
+        "Namespaces",
+        "Events",
+        "Tutorials",
+        "Interfaces"
+      ],
+      "meta": {
+        "keywords": "JavaScript, Pokedex, PokeAPI, Documentation, JSDoc, SPA, Vanilla JS"
+      }
+    },
+    "cleverLinks": false,
+    "monospaceLinks": false
+  }
+}

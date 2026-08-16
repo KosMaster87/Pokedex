@@ -42,9 +42,7 @@ function renderPokemonPopupHTML(pokemon) {
     .map((t) => `<p class="${t.type.name}">${t.type.name}</p>`)
     .join("");
 
-  const abilitiesHTML = pokemon.abilities
-    .map((ab) => `<p>${ab.ability.name}</p>`)
-    .join("");
+  const abilitiesHTML = pokemon.abilities.map((ab) => `<p>${ab.ability.name}</p>`).join("");
 
   return `
     <div class="pokemon-detail-container ${typeClass}">

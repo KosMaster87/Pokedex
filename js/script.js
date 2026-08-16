@@ -62,11 +62,7 @@ async function fetchPokemon(startIndex, count) {
 async function createHTMLPokemonCard() {
   let mainSection = document.getElementById("mainSection");
 
-  for (
-    let cardIndex = AllLoadedCards.length;
-    cardIndex < pokemonsAsObject.length;
-    cardIndex++
-  ) {
+  for (let cardIndex = AllLoadedCards.length; cardIndex < pokemonsAsObject.length; cardIndex++) {
     const pokemonToMainCard = pokemonsAsObject[cardIndex];
     AllLoadedCards.push(pokemonToMainCard);
 
